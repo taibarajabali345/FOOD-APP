@@ -1,0 +1,138 @@
+/* About Page Styles */
+.about {
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  background-color: #1f1f1f;
+  padding: 20px;
+}
+
+/* Hero Section Styles */
+.about-hero {
+  background: url("https://t3.ftcdn.net/jpg/08/50/06/22/360_F_850062214_Q2MvJsk17uN5ZNgrEf0pxpPN2os4jQxl.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 160px 10px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.about-hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Chef Section Styles */
+.chef-section {
+  margin-top: 50px;
+}
+
+.chef-section h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+/* Chef Card Layout */
+.chef-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.chef-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chef-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.chef-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.chef-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.chef-card p {
+  color: #bbb;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Mission Statement Styling */
+.mission-statement {
+  background: linear-gradient(45deg, rgba(255, 87, 34, 0.7), rgba(33, 150, 243, 0.7)),
+    url("https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2022/02/cover-25-02-22.jpg")
+      no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 50px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.mission-statement h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.mission-statement p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

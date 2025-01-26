@@ -1,0 +1,137 @@
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient background for modern look */
+  padding: 15px 10%; /* Adjust padding on larger screens */
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo Styling (For Site Name - Removed Link) */
+.logo {
+  font-size: 2rem;
+  color: #ff4081;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  left: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Navigation Menu Styling */
+nav {
+  display: flex;
+  gap: 25px; /* Space between each link (increased for larger screens) */
+  align-items: center;
+  width: auto; /* Let the links take as much width as needed */
+  justify-content: flex-end; /* Align links to the right */
+}
+
+/* Navigation Links Styling */
+nav .nav-links {
+  display: flex;
+  gap: 25px; /* Spacing between links */
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  position: relative;
+  padding: 6px;
+  transition: color 0.3s, transform 0.2s ease, padding 0.2s;
+}
+
+nav a:hover {
+  color: #ff4081; /* Change color on hover */
+  transform: translateY(-3px); /* Small lift effect */
+  padding-bottom: 12px; /* Underline effect */
+}
+
+/* Underline Effect for Links */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff4081;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: visibility 0s, transform 0.3s ease-in-out;
+}
+
+/* Display the underline on hover */
+nav a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Fluid Layout for Mobile/Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 5%; /* Add top and bottom padding */
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    left: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    margin: 5px;
+  }
+}
+
+/* Compact layout for smaller screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 5px;
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+/* Full page background */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(36, 123, 160, 0.85), rgba(131, 58, 180, 0.85)), 
+              url("https://img.freepik.com/premium-vector/email-service-concept-3d-illustration-icon-composition-with-open-envelope-with-letter-reminder_198565-1938.jpg") 
+              no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 0 20px;
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animation for page loading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form container */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px; /* Increased width for more space */
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px; /* More padding to enlarge the form */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Animation for the form sliding up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Style */
+.contact h1 {
+  font-size: 3rem; /* Bigger heading */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form input styling */
+.input-field {
+  width: 100%;
+  padding: 15px; /* Larger padding for bigger input areas */
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.2rem; /* Slightly larger font size for readability */
+  outline: none;
+  transition: border 0.3s, transform 0.3s;
+}
+
+.input-field:focus {
+  border-color: #ff4081;
+  transform: scale(1.05);
+}
+
+/* Button styles */
+.submit-btn {
+  background: #ff4081;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.3rem; /* Larger font for the submit button */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 30px; /* More margin for spacing */
+}
+
+.submit-btn:hover {
+  background: #f50057;
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  transform: scale(1);
+}
+
+/* Sent message styles */
+.message-sent {
+  background-color: #ff4081;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  margin-top: 25px;
+  animation: slideIn 0.5s ease-out;
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure the background size is perfect on all devices */
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2.8rem; /* Slightly smaller but readable on smaller screens */
+  }
+
+  .input-field {
+    padding: 15px;
+    font-size: 1.1rem; /* Improved readability */
+  }
+
+  .submit-btn {
+    font-size: 1.2rem;
+    padding: 12px; /* Reduced padding for space optimization */
+  }
+
+  /* Reduce form padding */
+  .contact form {
+    padding: 40px; /* Reduced padding for small screens */
+    gap: 18px; /* Reduced gap between form elements */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 2.2rem; /* Decrease font size */
+  }
+
+  .input-field {
+    font-size: 1rem; /* Comfortable text size for readability */
+    padding: 12px; /* Ensure they remain touch-friendly */
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  /* Form container adjustments */
+  .contact form {
+    padding: 25px; /* Further reduced form padding */
+    width: 90%; /* More space utilization */
+  }
+}
+
+
